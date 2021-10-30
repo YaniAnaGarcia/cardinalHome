@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link para booststrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+    
+    <title>Formulario de Contacto</title>
+</head>
+<body class="bg-transparent">
+    <section class="container-fluid">
+        <div class="card col-lg-12 p-5"> 
+            <div class="card  text-center mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">CONTACTO</h5>
+                </div>
+            </div> 
+            <!--formulario-->
+            <div class="mb-2">
+                <form action="" name="formulario" method="get" >
+                    <div class="mb-2">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="ej: Florencia">
+                    </div>
+                    <div class="mb-2">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" name="apellido" id="apellido" placeholder="ej: Rodriguez">
+                    </div>
+                    <div class="mb-2">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="ej: frodriguez@email.com">
+                    </div>
+                    <!-- 
+                    <div class="mb-2">
+                        <label for="motivo">Motivo de tu contacto</label>
+                        <select class="form-select" aria-label="Default select example" name="opcion">
+                        <option value="elegir">Elegir</option>
+                            <option value="1">Productos.</option>
+                            <option value="2">Asesoría.</option>
+                            <option value="3">Mayorista</option>
+                          </select>
+                    </div>
+                -->
+                    <!--mensaje-->    
+                    <div class="mb-2">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" class="form-control" id="mensaje" placeholder="Dejanos tu consulta..."></textarea>
+                    </div>
+                    <!--newslatter-->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                          Suscribirme al Newslatter.
+                        </label>
+                    </div>
+                    <!--Boton enviar-->    
+                    
+                    <div class="mb-2">
+                        <button class="btn btn-body">Enviar</button>
+                    </div>
+                    
+                    <div class="card  text-center mb-3">
+                        <div class="card-body">
+                          <h5 class="card-title">Encontranos en:</h5>
+                        </div>
+                    </div>                     
+                        <div class="ubicacion">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.270595302094!2d-58.397479485045594!3d-34.79913347537045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd315685e1d19%3A0xe0cc6898cc2dc1bd!2sFrancisco%20Segu%C3%AD%20831%2C%20Adrogu%C3%A9%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1635481184598!5m2!1ses-419!2sar" style="border:1;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            
+        </div> 
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

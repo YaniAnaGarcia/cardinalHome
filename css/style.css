@@ -1,0 +1,548 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+   /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+   font-family: 'Open Sans', sans-serif;
+   box-sizing: border-box;
+   
+}
+
+/*header*/
+header{
+    height: 100px;
+    background: #d3d3d3;
+    padding: 0px 50px;
+    color: #fff;
+    display: flex; /*hace que sea flexible*/
+    justify-content: space-between; /*damos espacio entre los elementos*/
+    align-items: center; /*alinea los elementos*/
+}
+.logo{
+    
+    width: 250px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.menu a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;/*sacar el subrayado de los enlaces*/
+    padding: 0 10px;
+    transition: 0.4s;
+}
+.mostrar-menu, .esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /*oculta el menu hamburguesa en desktop*/
+    transition: 0.4s;
+}
+.mostrar-menu{
+    /*ordenar que menu mostrar*/
+    order: 1;
+}
+.menu a:hover, .mostrar-menu:hover, .esconder-menu:hover{
+    color: #fa8072;
+}
+#check{
+    display: none;/*oculta el boton check*/
+}
+/*login*/
+.registro{
+    padding: 0px 50px;
+    background: #193749;
+    color: #fff;
+    font-size: 15px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.registro a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;/*sacar el subrayado de los enlaces*/
+    padding:  10px;
+    transition: 0.4s;
+}
+.registro i{
+    color: #fff;
+}
+.registro a:hover, .registro i:hover{
+    color: #fa8072;
+}
+
+
+/*banner*/
+#banner{
+    padding: 0px 50px; /*alinearlo al igual que el header*/
+    background-image: url(../img/banner.jpg);
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner::before{
+    content: " ";
+    background: rgba(77, 77, 92, 0.6); /*efecto desenfocado en la foto*/
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    left: 0;
+}
+.contenido-banner{
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex; /*flexbox*/
+    flex-direction: column;
+    justify-content: center;
+}
+.contenido-banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+.contenido-banner h3 span{
+    font-weight: 600;
+    font-size: 40px;
+}
+.boton-empezar{
+    text-decoration: none;
+    color: #fff;
+    /*border: 1px solid #6cc091;*/
+    border: 2px solid #fa8072;
+    padding: 20px 40px;
+    align-self: baseline; /*el ancho del contenedor se adapta al contenido*/
+}
+.boton-empezar:hover{
+    background: #fa8072;
+    transition: all 0.4s;
+}
+/*secciones*/
+#secciones{
+    padding: 0px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#secciones img {
+    border-radius: 5%;
+    width: 100%;
+}
+
+#secciones div{
+    padding: 30px 30px;
+}
+
+#secciones div h4 {
+    color: #fa8072;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+
+#secciones div p{
+    color: #4d4d5c87;
+    font-size: 18px;
+}
+
+.boton-ver-mas{
+    display: inline-block;
+    text-decoration: none;
+    color: #fa8072;
+    padding: 10px 30px;
+    border: 3px solid #fa8072;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: all 0.4s;
+}
+
+.boton-ver-mas:hover{
+    background: #fa8072;
+    color: #fff;
+}
+
+
+/*banner inferior*/
+#banner-inferior{
+    padding: 0px 50px;
+    background-image: url(../img/banner-inferior.png);
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner-inferior::before{
+    content: " ";
+    background: rgba(77, 77, 92, 0.6); /*efecto desenfocado en la foto*/
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    left: 0;
+}
+#banner-inferior div{
+    position: relative;
+    color: #fff;
+    height: 100%;
+    font-size: 30px;
+    font-weight: 100;
+    padding: 60px 20px;
+    overflow: hidden;
+}
+/*animacion*/
+#banner-inferior h3{
+    animation-duration: 5s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+/*iconos*/
+
+#iconos{
+    padding: 0px 50px;
+    background: rgba(77, 77, 92, 0.6);
+}
+.contenido-iconos{
+    padding: 50px 50px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.contenido-iconos div{
+    flex: 1;
+    margin: 20px 0px;
+    border-right: 2px solid rgba(255, 255,255, 0.2);
+}
+#icono-seguridad{
+    border: none;
+}
+.contenido-iconos div i{
+    color: #193749;
+}
+
+.contenido-iconos div h6{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 10px 0px;
+}
+.contenido-iconos div p{
+    color: rgba(255, 255,255, 0.55);
+    font-size: 15px;
+}
+/*footer*/
+footer{
+    background: #4d4d5c;
+    color: #cccccc4a;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+/*-----------seccion nosotros---------------*/
+/*seccion sobre mi*/
+main{
+    padding: 0px 50px;
+    color: #193749;
+    font-size: 15px;
+}
+.presentacion{
+    padding:20px;
+    text-align: center;
+}
+
+.presentacion__foto{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #fa8072;
+    margin-bottom: 10px;
+    object-fit: cover;
+    object-position: top;
+}
+.presentacion h2{
+    color: #fa8072;
+}
+
+.presentacion__texto{
+    width: 80%;
+    margin: 0 auto;
+}
+.presentacion__texto span{
+    font-weight: 600;
+}
+
+/*sobre mi*/
+.sobreMi{
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 80px; /*espaciado entre las columnas*/
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+ 
+.sobreMi__img{
+    text-align: center;
+}
+ 
+.sobreMi__img--izquierda{
+    text-align: left;
+}
+ 
+.sobreMi__foto{
+    max-width: 80%;
+}
+.sobreMi__parrafo{
+    margin-bottom:20px;
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: justify;
+}
+/* --------- seccion productos--------------- */
+.productos{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    border-top: 1px solid #fa8072;
+    border-bottom: 1px solid #fa8072;
+}
+.containerP{
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.item{
+    background-color: #d3d3d3;
+    cursor: pointer;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .95);
+    transition: all 300ms;
+    position: relative;
+}
+/*efecto sobre la foto*/
+.item::after{
+    content: "";
+    background-color: rgba(179, 229, 252, .1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: all 300ms;
+    opacity: 0;
+}
+.item:hover::after{
+    opacity: 1;
+    transform: scale(1);
+}
+.item:hover{
+    transform: scale(1.05);
+}
+.item-text{
+    padding: 1em;
+    color: #193749;
+    text-align: center;
+}
+.item-img{
+    max-width: 100%;
+    display: block;
+}
+/*--------- contactos------*/
+
+#contactanos{
+    background: #d3d3d3;
+}
+.contactanos__contenido iframe {
+    width: 100%;
+    height: 920px;
+    display: flex;
+    justify-content: center;
+}
+
+/*-------- responsive tablet -----------*/
+@media(max-width:768px){
+    /*header*/
+    .mostrar-menu, .esconder-menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #d3d3d3;
+        right: -100%; /*acomodarlo a la derecha*/
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;/*para que no se pise con otros elementos*/
+        transition: 0.8s;
+    }
+    .logo{
+        width: 180px;
+    }
+    .menu a {
+        display: block; /*pasa los elementos del menu que son de linea a bloque*/
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0; /*esconde el menu a la derecha*/
+    }
+    /*banner*/
+    #banner{
+       height: 60vh;
+    }
+    #banner::before{
+        height: 60vh;
+    }
+
+    /*secciones*/
+    #secciones{
+        flex-direction: column;
+    }
+    #secciones img{
+        width: 70%;
+    }
+    /*banner-inferior*/
+    #banner-inferior div{
+        padding: 50px 0px;
+    }
+
+    /*iconos*/
+    .contenido-iconos{
+        flex-direction: column;
+    }
+    .contenido-iconos div{
+        border: none;
+    }
+    .contenido-iconos div i{
+        font-size: x-large;
+    }
+    /*productos*/
+    
+    .containerP{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .item-text h3{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .item-text p{
+        font-size: 14px;
+    }
+    /*contacto*/
+    #contactanos{
+        flex-direction: column;
+    }
+    .contactanos__contenido{
+        width: 80%;
+    }
+
+
+}
+/*celular*/
+/*header*/
+@media(max-width:425px){
+    .logo{
+        width: 120px;
+        margin-left: 5px;
+    }
+    /*registro*/
+    .registro{
+        font-size: 10px;
+        height: 20px;
+    }
+    /*banner*/
+    #banner{
+        height: 45vh;
+     }
+     #banner::before{
+         height: 45vh;
+     }
+    .contenido-banner h3{
+        font-size: 18px;
+        font-weight: 300px;
+    }
+    .contenido-banner h3 span{
+        font-size: 25px;
+        font-weight: 500px;
+    }
+    /*secciones*/
+    #secciones img{
+        width: 90%;
+    }
+    /*banner-inferior*/
+    #banner-inferior div{
+        font-size: 20px;
+        padding: 60px 0px;
+    }
+    /*iconos*/
+    .contenido-iconos{
+        padding: 0px ;
+    }
+    .contenido-iconos div i{
+        font-size: small;
+    }
+    .contenido-iconos div h6{
+        font-size: 15px;
+        font-weight: 100;
+    }
+    .contenido-iconos div p{
+        font-size: 12px;
+    }
+    /*footer*/
+    footer{
+        font-size: 12px;
+    }
+    
+    /*----- nosotros ------*/
+    /*sobre mi*/
+    .presentacion__texto{
+        width: 100%;
+    }
+    .sobreMi{
+        grid-template-columns: 1fr;
+    }
+    .sobreMi__img--izquierda{
+        text-align: center;
+    }
+    .sobreMi__texto:last-child{
+        grid-row: 3/4;
+    }
+    /*----- productos -------*/
+    .containerP{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /*contacto*/
+    
+}
+
+
