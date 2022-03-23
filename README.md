@@ -1,3 +1,4 @@
 # cardinalHome
-Proyecto tienda online cardinal Home
-Trabajo practico integrador- front, realizado para curso de Programador full stack. 
+Primer Proyecto:  tienda online "Cardinal Home"
+Realizado en #HTML5 #CSS #JavaScript.
+#Diseño Responsive
